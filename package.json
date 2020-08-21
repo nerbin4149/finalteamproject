@@ -1,0 +1,22 @@
+{
+  "name": "express-tutorial",
+  "version": "1.0.0",
+  "main": "app_mysql.js",
+  "scripts": {
+    "start": "node app_mysql.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "mysqljs": "0.0.2-security",
+    "body-parser": "^1.14.2",
+    "express-session": "^1.13.0"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "description": ""
+}

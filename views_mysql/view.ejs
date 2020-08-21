@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1><a href='/Cars'>Car List</a></h1>
+
+    <ol>
+      <% for(var i = 0; i< cares.length; i++){%>
+        <li>
+          <a href='/Cars/<%= cares[i].car_id %>'>
+            <%= cares[i].car_serialNum %>
+          </a>
+        </li>
+      <% }; %>
+    </ol>
+
+    <article>
+      <% if(Cars){ %>
+        <p><%= Cars.car_id %></p>
+        <p><%= Cars.car_serialNum %></p>
+        <p><%= Cars.car_make %></p>
+        <p><%= Cars.car_model %></p>
+        <p><%= Cars.car_year %></p>
+        <p><%= Cars.car_color %></p>
+        <p><%= Cars.car_forsale %></p>
+      <% } else { %>
+        <h2>Welcome</h2>
+         select option.
+      <% } %>
+    </article>
+
+    <ul>
+        <li><a href="/Cars/add">add</a></li>
+      <% if(Cars){ %>
+        <li><a href='/Cars/<%= Cars.car_id %>/edit'>edit</a></li>
+        <li><a href="/Cars/<%= Cars.car_id %>/delete">delete</a></li>
+      <% } %>
+    </ul>   
+  </body>
+</html>

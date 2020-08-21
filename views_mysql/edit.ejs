@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1><a href='/Cars'>Edit a Car Information</a></h1>
+    <ol>
+      <% for(var i = 0; i<cares.length; i++){%>
+        <li>
+          <a href='/Cars/<%= cares[i].car_id %>'>
+            <%= cares[i].car_serialNum %>
+          </a>
+        </li>
+      <% }; %>
+    </ol>
+    <article>
+      <form action="/Cars/<%= Cars.car_id %>/edit" method="post">
+        <p><input type="text" name="car_serialNum" value='<%= Cars.car_serialNum %>' placeholder="car_serialNum" ></p>
+        <p><input type="test" name="car_make" value='<%= Cars.car_make %>' placeholder="car_make"><%= Cars.car_make %></p>
+        <p><input type="text" name="car_model" value='<%= Cars.car_model %>' placeholder="car_model"></p>
+        <p><input type="text" name="car_year" value='<%= Cars.car_year %>' placeholder="car_year"></p>
+        <p><input type="text" name="car_color" value='<%= Cars.car_color %>' placeholder="car_color"></p>
+        <p><input type="text" name="car_forsale" value='<% Cars.car_forsale %>' placeholder="car_forsale"></p>
+        <p><input type="submit"></p>
+      </form>
+    </article>
+    <ul>
+        <li><a href="/Cars/add">add</a></li>
+    </ul>
+  </body>
+</html>

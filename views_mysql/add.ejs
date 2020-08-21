@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1><a href='/Cars'>ejegumanhagojipegago</h1>
+    <ol>
+      <% for(var i = 0; i<cares.length; i++){%>
+        <li>
+          <a href='/Cars/<%= cares[i].car_id %>'>
+            <%= cares[i].car_serialNum %>
+          </a>
+        </li>
+      <% }; %>
+    </ol>
+    <article>
+      <form action="/Cars/add" method="post"> 
+        <p><input type="text" name="car_serialNum" placeholder="car_serialNum"></p>
+        <p><input type="text" name="car_make" placeholder="car_make"></p>
+        <p><input type="text" name="car_model" placeholder="car_model"></p>
+        <p><input type="text" name="car_year" placeholder="car_year"></p>
+        <p><input type="text" name="car_color" placeholder="car_color"></p>
+        <p><input type="text" name="car_forsale" placeholder="car_forsale"></p>
+        <p><input type="submit"></p>
+      </form>
+    </article>
+  </body>
+</html>
